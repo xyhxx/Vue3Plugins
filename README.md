@@ -7,9 +7,11 @@
 > 在 main.js 进行引入并初始化
 
 ```javascript
+
 import xyhLoading from './plugins/loading';
 
 createApp(App).use(xyhToast, {theme: '#00695c', color: '#fff'}).mount('#app');
+
 ```
 
 > options
