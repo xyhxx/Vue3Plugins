@@ -13,6 +13,7 @@ createApp(App).use(xyhToast, {theme: '#00695c', color: '#fff'}).mount('#app');
 ```
 
 > options
+
 | Param |  Type     | Description       |
 | :---- | :----:    | :---------------  |
 | theme  | String   | 确认按钮背景色            |
