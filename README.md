@@ -69,7 +69,7 @@ createApp(App).use(xyhToast, {theme: '#00695c', color: '#fff'}).mount('#app');
 
 | Param |  Type     | Description       |
 | :---- | :----:    | :---------------  |
-| duration  | Number   | 展示事件，字段为0时展示按钮组            |
+| duration  | Number   | 展示时间，字段为0时展示按钮组            |
 | type   | Number    | 0：成功，1：警告，2：错误    |
 | title | String | 标题 |
 | content | String | 内容 |
