@@ -10,16 +10,8 @@
 
 import xyhLoading from './plugins/loading';
 
-createApp(App).use(xyhToast, {theme: '#00695c', color: '#fff'}).mount('#app');
-
+createApp(App).use(xyhLoading).mount('#app');
 ```
-
-> options
-
-| Param |  Type     | Description       |
-| :---- | :----:    | :---------------  |
-| theme  | String   | 确认按钮背景色            |
-| color   | String    | 文字颜色    |
 
 > xyhLoading(type, msg);
 
@@ -60,10 +52,18 @@ export default {
 > 在 main.js 进行引入并初始化
 
 ```javascript
-import xyhLoading from './plugins/loading';
+import xyhToast from './plugins/toast';
 
-createApp(App).use(xyhLoading).mount('#app');
+createApp(App).use(xyhToast, {theme: '#00695c', color: '#fff'}).mount('#app');
 ```
+
+> options
+
+| Param |  Type     | Description       |
+| :---- | :----:    | :---------------  |
+| theme  | String   | 确认按钮背景色            |
+| color   | String    | 文字颜色    |
+
 
 > xyhToast(options)
 
