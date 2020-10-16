@@ -2,15 +2,17 @@
 
 > css 动画样式使用的 vivify 动画组件中的部分动画
 
-##  loadingPlugin
+##  loading
 
 > 在 main.js 进行引入并初始化
 
 ```javascript
 
-import xyhLoading from './plugins/loading';
+import {loading, dialog} from './plugins';
 
-createApp(App).use(xyhLoading).mount('#app');
+createApp(App)
+  .use(loading)
+  .mount('#app')
 ```
 
 > xyhLoading(type, msg);
@@ -23,38 +25,34 @@ createApp(App).use(xyhLoading).mount('#app');
 >  示例
 
 ```javascript
+import { inject, onMounted } from "vue";
 
-import { inject } from 'vue';
 export default {
-  name: 'App',
+  name: "App",
   setup() {
-    // 继承loading方法
-    const xyhLoading = inject('xyhLoading');
-    // 抛出loading方法
-    return { xyhLoading };
-  },
-  methods: {
-    // 展示loading的事件
-    someEventToShowLoading(){
-      this.showLoading(true, '加载中');
-    },
-    // 隐藏loadind的事件
-    someEventToHideLoading(){
-      this.showLoading(false);
-    },
+    const loading = inject("xyhLoading");
+
+    onMounted(() => {
+      loading(true, "正在加载");
+      setTimeout(() => loading(false), 2000);
+    });
   },
 };
 
 ```
 
-##  toastPlugin
+![avatar](./plugins/preview/loading.png)
+
+##  dialog
 
 > 在 main.js 进行引入并初始化
 
 ```javascript
-import xyhToast from './plugins/toast';
+import {loading, dialog} from './plugins';
 
-createApp(App).use(xyhToast, {theme: '#00695c', color: '#fff'}).mount('#app');
+createApp(App)
+  .use(dialog, {theme: '#d84315', color: 'white'})
+  .mount('#app')
 ```
 
 > options
@@ -82,28 +80,29 @@ createApp(App).use(xyhToast, {theme: '#00695c', color: '#fff'}).mount('#app');
 
 ```javascript
 
-import { inject } from 'vue';
+import { inject, onMounted } from "vue";
+
 export default {
-  name: 'App',
+  name: "App",
   setup() {
-    // 继承xyhToast方法
-    const xyhToast = inject('xyhToast');
-    // 抛出xyhToast方法
-    return { xyhToast };
-  },
-  methods: {
-    // 展示toast的事件
-    someEventToShowToast(){
-      this.xyhToast({
+    const dialog = inject("xyhDialog");
+
+    onMounted(() => {
+      const options = {
         type: 1,
-        content: '您确定要删除当前元素吗？',
-        confirmText: '确定',
+        content: "您确定要删除当前元素吗？",
+        confirmText: "确定",
         showCancel: true,
-        cancelText: '取消',
-        callback: res => console.log(res),
-      });
-    },
+        cancelText: "取消",
+        callback: (res) => console.log(res),
+      };
+      dialog(options);
+    });
   },
 };
 
 ```
+
+![avatar](./plugins/preview/dialog.png)
+
+> 出现问题欢迎反馈至<https://github.com/xyhxx/Vue3Plugins>，谢谢！

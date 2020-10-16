@@ -38,6 +38,8 @@ const plugin = {
       content: '我是内容',
       callback: function() {},
     });
+    const themeColor = options && options.theme ? options.theme : '#1565c0';
+    const fontColor = options && options.color ? options.color : 'white';
 
     const clickFunction = e => {
       const { state: result } = e.target.dataset;
@@ -69,7 +71,7 @@ const plugin = {
                   id: 'xyhToastInfoBtn',
                   class: 'btnGroupItems',
                   'data-state': true,
-                  style: `background-color: ${options.theme}; color: ${options.color}`,
+                  style: `background-color: ${themeColor}; color: ${fontColor}`,
                   onClick: clickFunction,
                 }, state.confirmContent),
               ]),
@@ -117,7 +119,7 @@ const plugin = {
       }
     };
 
-    app.provide('xyhToast', showToast);
+    app.provide('xyhDialog', showToast);
   },
 };
 

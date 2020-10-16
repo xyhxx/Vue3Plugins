@@ -36,7 +36,7 @@ const plugin = {
      * @param {String} msg loading文字介绍
      */
     const showLoading = (type, msg) => {
-      type = type || '加载中';
+      msg = msg || '加载中';
       state.isShowLoading = type;
       state.loadingMsg = msg;
     };
