@@ -2,6 +2,12 @@
 
 > css 动画样式使用的 vivify 动画组件中的部分动画
 
+# 从npm下载插件
+
+``` 
+npm install vue3-xyh-dialog
+```
+
 ##  loading
 
 > 在 main.js 进行引入并初始化
@@ -106,3 +112,4 @@ export default {
 ![avatar](./plugins/preview/dialog.png)
 
 > 出现问题欢迎反馈至<https://github.com/xyhxx/Vue3Plugins>，谢谢！
+> vue2版本地址<https://github.com/xyhxx/toast>
