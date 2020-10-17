@@ -54,7 +54,7 @@ export default {
 > 在 main.js 进行引入并初始化
 
 ```javascript
-import {loading, dialog} from './plugins';
+import {loading, dialog} from 'vue3-xyh-dialog';
 
 createApp(App)
   .use(dialog, {theme: '#d84315', color: 'white'})
