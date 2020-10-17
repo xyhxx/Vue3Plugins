@@ -14,7 +14,7 @@ npm install vue3-xyh-dialog
 
 ```javascript
 
-import {loading, dialog} from './plugins';
+import {loading, dialog} from 'vue3-xyh-dialog';
 
 createApp(App)
   .use(loading)
