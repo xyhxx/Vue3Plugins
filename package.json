@@ -1,0 +1,25 @@
+{
+  "name": "vue3-xyh-dialog",
+  "version": "1.2.1",
+  "description": "基于vue3开发的dialog和loading插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyhxx/Vue3Plugins.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "loading",
+    "dialog"
+  ],
+  "author": "xyh_xx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xyhxx/Vue3Plugins/issues"
+  },
+  "homepage": "https://github.com/xyhxx/Vue3Plugins#readme"
+}
