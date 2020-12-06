@@ -1,4 +1,4 @@
-# 推荐使用[proste-loading](https://www.npmjs.com/package/proste-loading)和[proste-dialog](https://www.npmjs.com/package/proste-dialog)，更好的类型推导和使用hook方式使用
+# 推荐使用[proste-loading](https://www.npmjs.com/package/proste-loading)和[proste-dialog](https://www.npmjs.com/package/proste-dialog)，使用typescript重写，更好的类型推导和使用hook方式使用
 
 
 
