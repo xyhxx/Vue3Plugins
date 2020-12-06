@@ -1,3 +1,8 @@
+# 推荐使用[proste-loading](https://www.npmjs.com/package/proste-loading)和[proste-dialog](https://www.npmjs.com/package/proste-dialog)，更好的类型推导和使用hook方式使用
+
+
+
+
 # 基于Vue3的loading和toast插件
 
 > css 动画样式使用的 vivify 动画组件中的部分动画
