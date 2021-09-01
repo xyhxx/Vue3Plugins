@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: npm publish
 
 # Controls when the workflow will run
 on:
@@ -23,6 +23,12 @@ jobs:
       - name: Checkout
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v2
-
-      - name: NPM Publish
-        uses: JS-DevTools/npm-publish@v1
+      - name: Use Node.js
+        uses: actions/setup-node@v1.4.2
+        with:
+          registry-url: https://registry.npmjs.org
+          
+      - name: Publish to NPM
+        run: npm publish || true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
