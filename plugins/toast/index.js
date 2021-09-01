@@ -1,5 +1,7 @@
 import { reactive, createApp, h } from 'vue';
+
 import './index.css';
+
 import infoIcon from './img/info.png';
 import infoBg from './img/infoBg.png';
 import successIcon from './img/success.png';
